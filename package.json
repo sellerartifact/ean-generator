@@ -1,6 +1,6 @@
 {
   "name": "ean-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "keywords": [],
   "main": "dist/ean-generator.umd.js",
@@ -12,7 +12,7 @@
   "author": "王珏 <wangjuesix@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/wangjue666/ean-generator"
   },
   "license": "MIT",
   "engines": {
