@@ -1,5 +1,5 @@
 # ean-generator
-A randomly generated EAN-13 code FOR Amazon
+为亚马逊随机生成ean13码
 
 <p align="center">
     <a></a>
@@ -42,9 +42,9 @@ const Ean = require('ean-generator');
 **countryCodeArr**
 Type: `string[]`
 
-random First three country codes for gen ean
+设置要随机的前三位国家码
 
-[Retrieve the first three country codes of EAN bar code](http://www.appsbarcode.com/sc20130113/EAN-country-code-cn.html)
+[查看ean的前三位国家码](http://www.appsbarcode.com/sc20130113/EAN-country-code-cn.html)
 
 ## create(prop)
 gen ean-13 code
@@ -61,16 +61,16 @@ Type: object
 **countryCode？**
 Type: `string` | `number` Default: null, len is 3
 
-set First three country codes of EAN bar code
+设置要生成的EAN的前三位 不传就从构造函数里面设置的随机生成一个
 
 **vendorEan？**
 Type: `string` | `number` Default: null, len is 6
 
-Set gen ean number 4th to 10th, It represents the manufacturer code
+设置ean的4-10为厂商编码
 
 # isValid(code)
 
-Check ean code whether it is legal
+校验EAN是否合法
 
 Type:: `string`
 
