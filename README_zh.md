@@ -80,7 +80,7 @@ Type:: `string`
 const valid = ean.isValid('1234567890123')
 // false
 
-const valid = ean.isValid('039544164511')
+const valid = ean.isValid('1234567892870')
 // true
 
 ```
