@@ -1,7 +1,7 @@
 {
   "name": "ean-generator",
   "version": "0.0.1",
-  "description": "",
+  "description": "A randomly generated EAN-13 code FOR Amazon",
   "keywords": [],
   "main": "dist/ean-generator.umd.js",
   "module": "dist/ean-generator.es5.js",

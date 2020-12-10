@@ -51,7 +51,7 @@ Type: `string` | `number` Default: null, len is 3
 
 set First three country codes of EAN bar code
 
-**vendorEan**
+**vendorEan？**
 Type: `string` | `number` Default: null, len is 6
 
 Set gen ean number 4th to 10th, It represents the manufacturer code
