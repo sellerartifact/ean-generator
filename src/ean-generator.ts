@@ -1,4 +1,4 @@
-interface createProps {
+interface CreateProps {
   countryCode?: string | number
   vendorEan?: string | number
   size?: number
@@ -10,10 +10,10 @@ export default class EanGenerator {
   constructor(countryCodeArr: string[]) {
     this.setCountryCode(countryCodeArr)
   }
-  public create(prop: createProps = { size: 1 }): string {
+  public create(prop: CreateProps = { size: 1 }): string {
     return this._create(prop)
   }
-  public createMultiple(prop: createProps = { size: 1 }): string[] {
+  public createMultiple(prop: CreateProps = { size: 1 }): string[] {
     let { size } = prop
     let arr: string[] = new Array(size)
     if (!size || Number(size) <= 0 || isNaN(Number(size))) {
@@ -25,15 +25,15 @@ export default class EanGenerator {
     return arr
   }
 
-  private _create(prop: createProps) {
+  private _create(prop: CreateProps) {
     let { countryCode, vendorEan } = prop
     if (this.countryCodeArr.length === 0) {
       throw new RangeError('please set countryCode before call create!')
     }
-    if (countryCode && countryCode.toString().length != 3) {
+    if (countryCode && countryCode.toString().length !== 3) {
       throw new RangeError('the length of countryCode must be 6')
     }
-    if (vendorEan && vendorEan.toString().length != 6) {
+    if (vendorEan && vendorEan.toString().length !== 6) {
       throw new RangeError('the length of vendorEan must be 6')
     }
     if (!countryCode) {
@@ -51,7 +51,7 @@ export default class EanGenerator {
   }
 
   public isValid(num: string): boolean {
-    if (num.length != 13) {
+    if (num.length !== 13) {
       return false
     }
     let computedLastNum = this.computedEanLastNum(num)
@@ -64,7 +64,7 @@ export default class EanGenerator {
       throw new RangeError('the length of countryCodeArr must be >=1')
     }
     for (let i = 0; i < countryCodeArr.length; i++) {
-      if (countryCodeArr[i].length != 3) {
+      if (countryCodeArr[i].length !== 3) {
         throw new Error(`the length of ${countryCodeArr[i]} must be 3`)
       }
     }
