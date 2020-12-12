@@ -1,6 +1,7 @@
 interface createProps {
   countryCode?:string | number
   vendorEan?:string|number
+  size?:number
 }
 
 export default class EanGenerator {
@@ -9,7 +10,22 @@ export default class EanGenerator {
   constructor(countryCodeArr: string[]) {
     this.setCountryCode(countryCodeArr)
   }
-  public create(prop:createProps = {}): string {
+  public create(prop:createProps = {size: 1}): string{
+    return this._create(prop)
+  }
+  public createMultiple(prop:createProps = {size: 1}): string[] {
+    let {size} = prop
+    let arr:string [] = new Array(size)
+    if(!size || Number(size) <= 0 || isNaN(Number(size))){
+      size = 1
+    }
+    for(let i=0; i< size; i++){
+      arr[i]=this._create(prop)
+    }
+    return arr
+  }
+
+  private _create(prop: createProps){
     let {countryCode, vendorEan} = prop
     if (this.countryCodeArr.length === 0) {
       throw new RangeError('please set countryCode before call create!')

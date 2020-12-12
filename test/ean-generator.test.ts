@@ -2,17 +2,26 @@ import EanGenerator from "../src/ean-generator"
 
 let ean = new EanGenerator(['931', '983'])
 
-/**
- * Dummy test
- */
+
+describe('create multiple', ()=>{
+  it("return ean code is not empty", () => {
+    let arr = ean.createMultiple({size: 10})
+    expect(arr).toBeTruthy()
+    expect(arr.length).toBe(10)
+    for(let i=0;i<arr.length;i++){
+      expect(arr[i].length).toBe(13)
+    }
+  })
+})
+
 describe("create test", () => {
   it("return ean code is not empty", () => {
     expect(ean.create()).toBeTruthy()
   })
 
   it("return ean len is 13", () => {
-    let code = ean.create()
-    expect(code.length).toBe(13)
+      let code = ean.create()
+      expect(code.length).toBe(13)
   })
 
   it('test ean isValid method', ()=>{
