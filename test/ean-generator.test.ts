@@ -1,15 +1,20 @@
 import EanGenerator from '../src/ean-generator'
 
-let ean = new EanGenerator(['931', '983'])
+let ean = new EanGenerator(['030', '031', '039'])
 
 describe('create multiple', () => {
   it('return ean code is not empty', () => {
     let arr = ean.createMultiple({ size: 10 })
+    console.log(arr)
     expect(arr).toBeTruthy()
     expect(arr.length).toBe(10)
     for (let i = 0; i < arr.length; i++) {
       expect(arr[i].length).toBe(13)
     }
+  })
+  it('test size params', ()=>{
+    let arr = ean.createMultiple({size: 0})
+    expect(arr.length).toBe(1)
   })
 })
 
@@ -27,6 +32,7 @@ describe('create test', () => {
     let code = ean.create()
     let res = ean.isValid(code)
     expect(res).toBe(true)
+    expect(ean.isValid('123')).toBe(false)
   })
 
   it('input countryCode', () => {
