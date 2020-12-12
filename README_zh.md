@@ -26,8 +26,9 @@ npm install --save ean-generator
 import Ean from 'ean-generator';
 let ean = new Ean(['030', '031', '039'])
 const code = ean.create()
-
 // 039544164511
+const arr = ean.createMultiple({size: 3})
+// ['0397442001659','0304437586565','0317191566247']
 ```
 
 For commonJS
@@ -68,6 +69,20 @@ Type: `string` | `number` Default: null, len is 6
 
 设置ean的4-10为厂商编码
 
+# createMultiple(prop)
+gen multiple ean-13 code, return `array`
+
+**code**
+
+```javascript
+const arr = ean.createMultiple({size: 3, countryCode: '123', vendorEan: '456789'})
+```
+
+
+### prop?
+
+**size？**
+Type: `number` Default: 1
 # isValid(code)
 
 校验EAN是否合法
