@@ -26,8 +26,10 @@ npm install --save ean-generator
 import Ean from 'ean-generator';
 let ean = new Ean(['030', '031', '039'])
 const code = ean.create()
-
 // 039544164511
+const arr = ean.createMultiple({size: 3})
+// ['0397442001659','0304437586565','0317191566247']
+
 ```
 
 For commonJS
@@ -67,6 +69,21 @@ set First three country codes of EAN bar code
 Type: `string` | `number` Default: null, len is 6
 
 Set gen ean number 4th to 10th, It represents the manufacturer code
+
+# createMultiple(prop)
+gen multiple ean-13 code, return `array`
+
+**code**
+
+```javascript
+const arr = ean.createMultiple({size: 3, countryCode: '123', vendorEan: '456789'})
+```
+
+
+### prop?
+
+**size？**
+Type: `number` Default: 1
 
 # isValid(code)
 
