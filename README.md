@@ -1,5 +1,5 @@
 # ean-generator
-A randomly generated EAN-13 code FOR Amazon
+A randomly generated EAN-13 code For Amazon
 
 <p align="center">
      <a href="https://travis-ci.org/wangjue666/ean-generator"><img src="https://travis-ci.org/wangjue666/ean-generator.svg?branch=master" /></a>
