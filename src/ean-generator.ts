@@ -40,12 +40,12 @@ export default class EanGenerator {
       countryCode = this.pickCountryCode()
     }
     if (!vendorEan) {
-      vendorEan = this.fillNumber(6, Math.floor(Math.random() * 100000))
+      vendorEan = this.fillNumber(6)
     }
     let eanCode =
       countryCode.toString() +
       vendorEan.toString() +
-      this.fillNumber(3, Math.floor(Math.random() * 999))
+      this.fillNumber(3)
     let lastestNum = this.computedEanLastNum(eanCode)
     return eanCode + lastestNum
   }
@@ -95,11 +95,11 @@ export default class EanGenerator {
     return this.countryCodeArr[randomNum]
   }
 
-  private fillNumber(len: number, num: number): string {
-    num = Math.floor(Number(num))
-    let sub = num.toString().length
-    let randomNum = Math.floor(Math.random() * 10).toString()
-    let fillStr = new Array(Math.abs(len - sub)).fill(randomNum).join('')
-    return fillStr.toString() + num.toString()
+  private fillNumber(len: number): string {
+    let str = ''
+    for(let i=0;i<len;i++){
+        str+=Math.floor(Math.random() * 10).toString()
+    }
+    return str
   }
 }

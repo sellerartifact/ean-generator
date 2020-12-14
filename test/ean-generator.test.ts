@@ -5,7 +5,6 @@ let ean = new EanGenerator(['030', '031', '039'])
 describe('create multiple', () => {
   it('return ean code is not empty', () => {
     let arr = ean.createMultiple({ size: 10 })
-    console.log(arr)
     expect(arr).toBeTruthy()
     expect(arr.length).toBe(10)
     for (let i = 0; i < arr.length; i++) {
