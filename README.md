@@ -3,7 +3,7 @@ A randomly generated EAN-13 code For Amazon
 
 <p align="center">
      <a href="https://travis-ci.org/wangjue666/ean-generator"><img src="https://travis-ci.org/wangjue666/ean-generator.svg?branch=master" /></a>
-    <a></a>
+     <a href="https://codecov.io/gh/wangjue666/ean-generator"><img src="https://codecov.io/gh/wangjue666/ean-generator/branch/master/graph/badge.svg" /></a>
     <a href="https://npmcharts.com/compare/ean-generator?minimal=true" rel="nofollow"><img src="https://img.shields.io/npm/dm/ean-generator.svg" style="max-width:100%;"></a>
     <a href="https://www.npmjs.com/package/ean-generator" rel="nofollow"><img src="https://img.shields.io/npm/v/ean-generator.svg" style="max-width:100%;"></a>
     <a href="https://www.npmjs.com/package/ean-generator" rel="nofollow"><img src="https://img.shields.io/npm/l/ean-generator.svg?style=flat" style="max-width:100%;"></a>
