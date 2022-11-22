@@ -46,7 +46,7 @@ Type: `string[]`
 
 random First three country codes for gen ean
 
-[Retrieve the first three country codes of EAN bar code](http://www.appsbarcode.com/sc20130113/EAN-country-code-cn.html)
+[Retrieve the first three country codes of EAN bar code](https://wangjue666.github.io/ean-generator/EAN%E6%9D%A1%E7%A0%81%E5%89%8D%E4%B8%89%E7%A0%81%E5%9B%BD%E5%AE%B6%E4%BB%A3%E7%A0%81%E6%84%8F%E4%B9%89%E5%A6%82%E4%B8%8B.html)
 
 ## create(prop)
 gen ean-13 code
