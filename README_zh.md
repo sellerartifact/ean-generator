@@ -45,7 +45,7 @@ Type: `string[]`
 
 设置要随机的前三位国家码
 
-[查看ean的前三位国家码](http://www.appsbarcode.com/sc20130113/EAN-country-code-cn.html)
+[查看ean的前三位国家码](https://wangjue666.github.io/ean-generator/EAN%E6%9D%A1%E7%A0%81%E5%89%8D%E4%B8%89%E7%A0%81%E5%9B%BD%E5%AE%B6%E4%BB%A3%E7%A0%81%E6%84%8F%E4%B9%89%E5%A6%82%E4%B8%8B.html)
 
 ## create(prop)
 gen ean-13 code
